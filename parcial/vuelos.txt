@@ -1,0 +1,1 @@
+1232,Origen: cali|Destino: bogota|Fecha: 12/03/2025|Salida: 5|Llegada: 6,ninguno,0.0
