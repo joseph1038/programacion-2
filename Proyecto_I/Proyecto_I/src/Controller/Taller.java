@@ -238,7 +238,7 @@ public class Taller {
 
     int[][] matriz = new int[3][3];
 
-    // Llenar matriz con valores aleatorios (1 a 100)
+    // Llenar matriz 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             matriz[i][j] = (int)(Math.random() * 100);

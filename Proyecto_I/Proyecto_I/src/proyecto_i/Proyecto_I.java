@@ -9,8 +9,8 @@ public class Proyecto_I {
     /* Practica objPractica = new Practica();
      objPractica.ejercicio3();*/
     
-    Taller objtaller = new Taller();
-    objtaller.Ejercicio10();
+    Practica objPractica = new Practica();
+    objPractica.ejercicio10();
     }
     
 }
