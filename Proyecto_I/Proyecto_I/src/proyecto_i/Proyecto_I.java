@@ -10,7 +10,7 @@ public class Proyecto_I {
      objPractica.ejercicio3();*/
     
     Practica objPractica = new Practica();
-    objPractica.ejercicio10();
+    objPractica.ejercicio11();
     }
     
 }

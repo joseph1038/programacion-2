@@ -191,7 +191,7 @@ public class Practica {
 
         JOptionPane.showMessageDialog(null, "Empleado encontrado:\n" + emp);
 
-        String opcion = JOptionPane.showInputDialog("¿Desea modificar el salario? (si/no)");
+        String opcion = JOptionPane.showInputDialog("¿Desea modificar el salario? (si o no)xD");
 
         if (opcion != null && opcion.equalsIgnoreCase("si")) {
 
@@ -211,5 +211,61 @@ public class Practica {
         JOptionPane.showMessageDialog(null, "Empleado no encontrado");
     }
     }
+    
+    public void ejercicio11(){
+        
+         String entrada = JOptionPane.showInputDialog(null,"Ingrese el numero para encontrar el siguiente numero repetido ");
+                
+                if (entrada != null && !entrada.isEmpty()) {
+        int num = Integer.parseInt(entrada);
+        int digito = num + 1;
+        
+        while (tieneRepetidos(digito)) {
+            digito++;
+        }
+            
+        
+                
+        JOptionPane.showMessageDialog(null, "Entrada: " + num + "\nSiguiente sin repetidos: " + digito);
+        }
+}   boolean tieneRepetidos(int n) {
+    String s = String.valueOf(n);
+    for (int i = 0; i < s.length(); i++) {
+        for (int j = i + 1; j < s.length(); j++) {
+            if (s.charAt(i) == s.charAt(j));
+        }
+    }
+    return false;
+    }
+    public void ejercicio12(){
+        
+    String nombre = JOptionPane.showInputDialog(null, "Ingrese su nombre:");
+    String apellido = JOptionPane.showInputDialog(null, "Ingrese su apellido:");
+    
+    if (nombre != null && apellido != null) {
+        String correo1 = nombre.toLowerCase().charAt(0)+" - " + apellido.toLowerCase();
+        
+        String nombreSinEspacios = nombre.replace(" ", "").toLowerCase();
+        String apellidoCorto = (apellido.length() >= 4) ? apellido.substring(0, 4) : apellido;
+        String correo2 = nombreSinEspacios +  "." + apellidoCorto.toLowerCase();
+        
+        JOptionPane.showMessageDialog(null, "Opciones de correo:\n" + "1. " + correo1 + "@correo.com\n" + "2. " + correo2 + "@correo.com");
+    }
+    }
+    public void ejercicio13(){
+        
+        String entrada = JOptionPane.showInputDialog(null, "Ingrese un número de cualquier cantidad de dígitos:");
 
+    if (entrada != null && !entrada.isEmpty()) {
+        int suma = 0;
+        
+        for (int i = 0; i < entrada.length(); i++) {
+            char c = entrada.charAt(i);
+            if (Character.isDigit(c)) {
+                suma += Character.getNumericValue(c);
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Número ingresado: " + entrada + "\nLa suma de sus dígitos es: " + suma);
+    }
+    }
 }
